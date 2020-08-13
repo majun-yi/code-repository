@@ -1,9 +1,9 @@
-package com.dalaoyang.controller;
+package com.test.controller;
 
-import com.dalaoyang.entity.*;
-import com.dalaoyang.service.IEMPService;
-import com.dalaoyang.service.IStuService;
-import com.dalaoyang.service.ITeaService;
+import com.test.entity.*;
+import com.test.service.IEMPService;
+import com.test.service.IStuService;
+import com.test.service.ITeaService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

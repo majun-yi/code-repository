@@ -1,12 +1,10 @@
-package com.dalaoyang.service.impl;
+package com.test.service.impl;
 
 
-import com.dalaoyang.entity.*;
-import com.dalaoyang.enums.HTMLPageEnum;
-import com.dalaoyang.repository.StuRepository;
-import com.dalaoyang.repository.TeaRepository;
-import com.dalaoyang.service.IStuService;
-import com.dalaoyang.service.ITeaService;
+import com.test.entity.*;
+import com.test.enums.HTMLPageEnum;
+import com.test.repository.TeaRepository;
+import com.test.service.ITeaService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

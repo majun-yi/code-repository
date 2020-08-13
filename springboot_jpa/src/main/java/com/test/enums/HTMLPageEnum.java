@@ -1,4 +1,4 @@
-package com.dalaoyang.enums;
+package com.test.enums;
 
 import java.util.ArrayList;
 import java.util.HashMap;

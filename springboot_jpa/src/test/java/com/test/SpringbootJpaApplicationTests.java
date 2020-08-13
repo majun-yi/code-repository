@@ -1,7 +1,7 @@
-package com.dalaoyang;
+package com.test;
 
-import com.dalaoyang.enums.HTMLPageEnum;
-import com.dalaoyang.service.IStuService;
+import com.test.enums.HTMLPageEnum;
+import com.test.service.IStuService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

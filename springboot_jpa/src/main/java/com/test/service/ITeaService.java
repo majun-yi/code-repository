@@ -1,5 +1,5 @@
-package com.dalaoyang.service;
-import com.dalaoyang.entity.*;
+package com.test.service;
+import com.test.entity.*;
 
 /**
  * 人员管理 业务

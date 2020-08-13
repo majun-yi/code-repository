@@ -1,4 +1,4 @@
-package com.dalaoyang.entity;
+package com.test.entity;
 
 import lombok.*;
 import java.util.List;

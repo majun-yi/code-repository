@@ -1,4 +1,4 @@
-package com.dalaoyang.configure;
+package com.test.configure;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -21,7 +21,7 @@ public class SwaggerConfig {
                 .groupName("人员管理")
                 .select()
                 //.apis(RequestHandlerSelectors.basePackage("com.emp.manage.demo.controller"))
-                .apis(RequestHandlerSelectors.basePackage("com.dalaoyang.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.test.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(this.apiInfo());

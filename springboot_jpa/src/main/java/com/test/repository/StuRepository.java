@@ -1,8 +1,6 @@
-package com.dalaoyang.repository;
+package com.test.repository;
 
-import com.dalaoyang.entity.StudentEntity;
-import com.dalaoyang.entity.StudentVO;
-import com.dalaoyang.entity.User;
+import com.test.entity.StudentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

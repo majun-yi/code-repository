@@ -1,9 +1,7 @@
-package com.dalaoyang.service;
-import com.dalaoyang.entity.PageCriteriaDTP;
-import com.dalaoyang.entity.PageVO;
-import com.dalaoyang.entity.StudentEntity;
-import com.dalaoyang.entity.User;
-import org.springframework.stereotype.Component;
+package com.test.service;
+import com.test.entity.PageCriteriaDTP;
+import com.test.entity.PageVO;
+import com.test.entity.User;
 
 /**
  * 人员管理 业务

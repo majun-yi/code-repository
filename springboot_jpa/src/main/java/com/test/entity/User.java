@@ -1,4 +1,4 @@
-package com.dalaoyang.entity;
+package com.test.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

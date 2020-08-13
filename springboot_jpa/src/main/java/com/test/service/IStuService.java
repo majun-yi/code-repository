@@ -1,6 +1,5 @@
-package com.dalaoyang.service;
-import com.dalaoyang.entity.*;
-import org.springframework.stereotype.Component;
+package com.test.service;
+import com.test.entity.*;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package com.dalaoyang.service.impl;
+package com.test.service.impl;
 
 
-import com.dalaoyang.entity.*;
-import com.dalaoyang.repository.StuRepository;
-import com.dalaoyang.service.IStuService;
+import com.test.entity.*;
+import com.test.repository.StuRepository;
+import com.test.service.IStuService;
 import org.hibernate.SQLQuery;
 import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
