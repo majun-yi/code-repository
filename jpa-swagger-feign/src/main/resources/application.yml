@@ -1,0 +1,11 @@
+#本地IP
+ip: 192.168.10.246
+
+#热部署 配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useSSL=true&verifyServerCertificate=false&useUnicode=true&characterEncoding=UTF8
+    data-username: root
+    data-password: root
+    driver-class-name: com.mysql.jdbc.Driver
+
