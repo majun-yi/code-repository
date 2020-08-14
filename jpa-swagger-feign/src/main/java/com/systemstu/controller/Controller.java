@@ -1,20 +1,27 @@
 package com.systemstu.controller;
 
+import com.systemstu.pojo.Student;
 import com.systemstu.service.IStudentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-@Api(value = "管理系统Api" )
+
+import java.util.List;
+
+@Api(tags = "学生单模块管理" )
 @RestController
 public class Controller {
 
 
-
+    /**
+     * 构造方法式注入-->相当于@Autowire
+     */
     private IStudentService iStudentService;
     @Autowired
-    public void init(IStudentService iStudentService){
+    public void constructor(IStudentService iStudentService){
         this.iStudentService = iStudentService;
     }
 
@@ -23,4 +30,18 @@ public class Controller {
     public String test(){
         return iStudentService.getStr();
     }
+
+
+    @ApiOperation(value = "获取所有的学生信息")
+    @GetMapping("/getAllStudents")
+    public List<Student> getAllStudents(){
+        return iStudentService.getAllStudents();
+    }
+
+    @ApiOperation(value = "根据主键编码获取单独用户")
+    @GetMapping("/getStudentById/{id}")
+    public Student getStudentById(@PathVariable(name = "id")Integer id){
+        return null;
+    }
+
 }

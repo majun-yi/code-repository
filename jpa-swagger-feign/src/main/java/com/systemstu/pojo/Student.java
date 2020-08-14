@@ -1,12 +1,15 @@
 package com.systemstu.pojo;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 
-@Entity(name = "sys_student")
-@Data
+@Entity(name = "student")
+@Setter
+@Getter
 public class Student {
 
     @Id
@@ -15,4 +18,7 @@ public class Student {
 
     @Column(name = "name")
     private String name;
+
+    @Column(name = "sex")
+    private String sex;
 }
