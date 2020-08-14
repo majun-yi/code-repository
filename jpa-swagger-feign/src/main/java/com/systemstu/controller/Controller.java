@@ -1,21 +1,20 @@
 package com.systemstu.controller;
 
 import com.systemstu.pojo.Student;
+import com.systemstu.pojo.StudentDTO;
 import com.systemstu.service.IStudentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import java.util.Optional;
 
 @Api(tags = "学生单模块管理" )
 @RestController
 public class Controller {
-@Id
+
     /**
      * 构造方法式注入-->相当于@Autowire
      */
@@ -39,15 +38,21 @@ public class Controller {
         return iStudentService.getAllStudents();
     }
 
-    @ApiOperation(value = "根据主键编码获取单独用户")
+    @ApiOperation(value = "根据主键编码获取单独用户-方式一")
     @GetMapping("/getStudentById/{id}")
     public Student getStudentById(@PathVariable(name = "id")Integer id){
         return iStudentService.getStudentByID(id);
     }
 
+    @ApiOperation(value = "根据主键编码获取单独用户---Optional<Student>方式")
+    @GetMapping("/getStudentById2/{id}")
+    public Optional<Student> getStudentById2(@PathVariable(name = "id")Integer id){
+        return iStudentService.getStudentByID2(id);
+    }
+
     @ApiOperation(value ="分页查询")
     @PostMapping("/pageQuery/{pageNum}/{pageSize}")
-    public Page<Student> pageQuery(@RequestBody Student student,Integer pageNum,Integer pageSize){
+    public Page<Student> pageQuery(@RequestBody Student student, Integer pageNum, Integer pageSize){
         return iStudentService.pageQuery(student,pageNum,pageSize);
     }
 

@@ -45,7 +45,11 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
             <version>2.1.0.RELEASE</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.github.wenhao</groupId>
+            <artifactId>jpa-spec</artifactId>
+            <version>3.2.5</version>
+        </dependency>
         <!--swagger2 -->
         <dependency>
             <groupId>io.springfox</groupId>
