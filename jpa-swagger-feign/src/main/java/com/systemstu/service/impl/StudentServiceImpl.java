@@ -31,6 +31,12 @@ public class StudentServiceImpl implements IStudentService {
     public void constructor(StudentRepository studentRepository){
         this.studentRepository = studentRepository;
     }
+
+
+    public Student getOneInfo(Integer id) {
+        return studentRepository.getOneInfo(id);
+    }
+
     @Override
     public String getStr() {
         return "我是实现类方法!";
@@ -79,8 +85,10 @@ public class StudentServiceImpl implements IStudentService {
     public Integer deleteStudentReally(Integer id) {
         studentRepository.deleteById(id);
         //删除完之后再次进行查询,若无值,则说明删除成功
-        Student one = studentRepository.getOne(id);
-        if (one == null) {
+      //  Student one = studentRepository.getOne(id);
+
+        Optional<Student> optional = studentRepository.findById(id);
+        if (optional.get() == null) {
             return id;
         } else {
             return null;
@@ -89,9 +97,10 @@ public class StudentServiceImpl implements IStudentService {
 
     @Override
     public Integer deleteStudent(Integer id) {
-        Student student = studentRepository.getOne(id);
+       // Student student = studentRepository.getOne(id);
+        Student student = studentRepository.getOneInfo(id);
         Integer studentId = null;
-        if (student != null) {
+        if (student != null && student.getId()!=null) {
             studentId = student.getId();
             student.setIsDelete(false);
         }

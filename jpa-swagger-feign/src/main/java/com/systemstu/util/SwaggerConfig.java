@@ -47,8 +47,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("sagger测试学生系统文档") //接口管理文档首页显示
                 .description(" - Swagger使用演示")//API的描述
-                //.termsOfServiceUrl("www.footmark.top")//网站url等
-                .version("2.0")
+               // .termsOfServiceUrl("www.footmark.top")//网站url等
+                .version("1.0")
                 .build();
     }
 }
