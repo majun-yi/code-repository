@@ -14,8 +14,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @desc Swagger配置类，该类里面的应该是固定的，主要用来设置文档的主题信息，比如文档的大标题，副标题，公司名
  * 等
  */
-@Configuration//托管spring
 @EnableSwagger2//开启swagger功能
+@Configuration//托管spring
 public class SwaggerConfig {
     /**
      * 创建API应用
@@ -47,8 +47,8 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("sagger测试学生系统文档") //接口管理文档首页显示
                 .description(" - Swagger使用演示")//API的描述
-                .termsOfServiceUrl("www.footmark.top")//网站url等
-                .version("1.0")
+                //.termsOfServiceUrl("www.footmark.top")//网站url等
+                .version("2.0")
                 .build();
     }
 }

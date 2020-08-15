@@ -1,7 +1,6 @@
 package com.systemstu.controller;
 
 import com.systemstu.pojo.Student;
-import com.systemstu.pojo.StudentDTO;
 import com.systemstu.service.IStudentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

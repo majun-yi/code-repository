@@ -8,4 +8,8 @@ spring:
     data-username: root
     data-password: root
     driver-class-name: com.mysql.jdbc.Driver
-
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /
