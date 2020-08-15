@@ -20,4 +20,7 @@ public class Student {
 
     @Column(name = "sex")
     private String sex;
+
+    @Column(name = "isDelete")
+    private Boolean isDelete;
 }
