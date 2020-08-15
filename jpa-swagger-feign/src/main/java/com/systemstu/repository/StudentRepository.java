@@ -20,4 +20,5 @@ public interface StudentRepository extends JpaRepository<Student,Integer>, JpaSp
     */
     @Query(value = "select id,name,sex from student where 1 = 1 and isDelete = :isDelete",nativeQuery = true)
     Student getOneInfo(@Param(value = "isDelete")Integer id);
+
 }
