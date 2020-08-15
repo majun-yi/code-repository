@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
  * 学生管理的 jpa接口
  * 提供学生信息的增删该查
  */
+
 public interface StudentRepository extends JpaRepository<Student,Integer>, JpaSpecificationExecutor<Student> {
     /**
     * @Description: 根据ID查询单个信息
@@ -21,4 +22,6 @@ public interface StudentRepository extends JpaRepository<Student,Integer>, JpaSp
     @Query(value = "select id,name,sex from student where 1 = 1 and isDelete = :isDelete",nativeQuery = true)
     Student getOneInfo(@Param(value = "isDelete")Integer id);
 
+    @Query(value = "select id,name,sex from student where 1 = 1 and id = :id",nativeQuery = true)
+    Student getOneInfoByID(@Param(value = "id")Integer id);
 }

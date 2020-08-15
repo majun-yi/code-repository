@@ -14,7 +14,12 @@ public interface IStudentService {
     List<Student> getAllStudents();
 
     Student getStudentByID(Integer id);
-
+    /**
+    * @Description:    通过ID获取信息:方式二
+    * @Author:         mjy
+    * @CreateDate:     2020/8/15 13:36
+    * @Params   id
+    */
     Optional<Student> getStudentByID2(Integer id);
 
     Page<Student> pageQuery(Student student, Integer pageNum, Integer pageSize);

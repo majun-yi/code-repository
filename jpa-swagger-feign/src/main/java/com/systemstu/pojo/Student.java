@@ -3,6 +3,7 @@ package com.systemstu.pojo;
 import lombok.Getter;
 import lombok.Setter;
 import javax.persistence.*;
+import java.util.Optional;
 
 @Entity //说明这个了是entity实体类
 @Table(name = "student")//指定表名
@@ -23,4 +24,13 @@ public class Student {
 
     @Column(name = "isDelete")
     private Boolean isDelete;
+
+    public Student() {
+    }
+    public Student(Optional<Student> student) {
+        this.id = student.get().getId();
+        this.name = student.get().getName();
+        this.sex = student.get().getSex();
+        this.isDelete = student.get().getIsDelete();
+    }
 }
