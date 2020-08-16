@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Api(tags = "学生单模块管理" )
 @RestController
-public class Controller {
+public class StuController {
 
     /**
      * 构造方法式注入-->相当于@Autowire
