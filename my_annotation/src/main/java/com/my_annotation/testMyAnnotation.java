@@ -1,6 +1,6 @@
 package com.my_annotation;
 
-import com.my_annotation.service.MyAnnotation;
+import com.my_annotation.util.MyAnnotation;
 
 import java.lang.reflect.Method;
 
